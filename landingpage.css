@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100px;
+}
+.jumbotron {
+    background-color: #007bff; /* Blue */
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem;
+    position: relative;
+    animation: fadeIn 5s;
+}
+.jumbotron::before {
+    content: "\f0ac"; /* Globe icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.1);
+}
+.jumbotron .container {
+    position: relative;
+    z-index: 1;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.navbar {
+    background-color: #ffffff; /* White */
+    animation: slideInDown 1s;
+}
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar-brand {
+    margin-left: -100px;
+    padding-left: 0;
+} 
+.navbar-brand img {
+    max-height: 125px; /* Adjusted to match the logo's size */
+    max-width: 300px; /* Adjusted to match the logo's size */
+}
+.profile {
+    display: flex;
+    align-items: center;
+}
+.profile img {
+    border-radius: 50%;
+    max-height: 50px;
+    margin-right: 10px;
+}
+.service-icon {
+    font-size: 50px;
+    color: #ff0000; /* Red */
+}
+.contact-info {
+    margin-top: 20px;
+}
+.contact-info i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff; /* Blue */
+}
+.bg-light {
+    background-color: #ffffff !important; /* White */
+}
+.bg-primary {
+    background-color: #ff0000 !important; /* Red */
+}
+.bg-dark {
+    background-color: #343a40 !important; /* Dark */
+}
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+}
+.footer p {
+    margin: 0;
+}
+.list-unstyled li {
+    margin-bottom: 10px;
+}
+.list-unstyled i {
+    margin-right: 10px;
+}
+.btn-light {
+    background-color: white;
+    color: #ff0000; /* Red */
+    border-color: #ff0000; /* Red */
+}
+.btn-light:hover {
+    background-color: #ff0000; /* Red */
+    color: white;
+}
+.animated-section {
+    animation: fadeInUp 1s;
+}
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#quote {
+    background-color: #ffffff; /* White */
+}
+#quote .container {
+    width: 1080px;
+    height: fit-content;
+    background-color: #007bff; /* Blue */
+    padding: 2rem;
+    border-radius: 10px;
+}
