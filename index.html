@@ -123,7 +123,47 @@
         <h2 class="text-center mb-4">Get a Quote</h2>
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBXCUkClVLH4Bi8_3PFEwPdYpGIEhPhOtkMgCDJtytWY40Rg/viewform?embedded=true" width="640" height="1258" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <div class="container">
+                    <h2>Item Dimension Calculator</h2>
+                    <div class="input-group">
+                        <label for="length">Length (cm):</label>
+                        <input type="number" id="length">
+                    </div>
+                    <div class="input-group">
+                        <label for="width">Width (cm):</label>
+                        <input type="number" id="width">
+                    </div>
+                    <div class="input-group">
+                        <label for="height">Height (cm):</label>
+                        <input type="number" id="height">
+                    </div>
+                    <div class="input-group">
+                        <label for="total">Total (Length × Width × Height):</label>
+                        <input type="number" id="total" readonly>
+                    </div>
+                    <input type="number" id="deadWeight" readonly>
+                    <div class="input-group">
+                        <label for="kg">KG:</label>
+                        <input type="number" id="kg" readonly>
+                    </div>
+                    <button onclick="calculate()">Calculate</button>
+                </div>
+
+                <script>
+                    function calculate() {
+                        var length = parseFloat(document.getElementById('length').value) || 0;
+                        var width = parseFloat(document.getElementById('width').value) || 0;
+                        var height = parseFloat(document.getElementById('height').value) || 0;
+
+                        var total = length * width * height;
+                        var deadWeight = total / 139 / 2.2;
+                        var kg = Math.round(deadWeight);
+
+                        document.getElementById('total').value = total;
+                        document.getElementById('deadWeight').value = deadWeight;
+                        document.getElementById('kg').value = kg;
+                    }
+                </script>
             </div>
         </div>
     </div>
